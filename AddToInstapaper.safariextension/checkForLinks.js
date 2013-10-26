@@ -2,12 +2,19 @@ document.addEventListener("contextmenu", handleContextMenu, false);
 
 function handleContextMenu(event)
 {
-	if((event.target.baseURI == 'https://twitter.com/') && (event.target.className == 'js-display-url'))
-	{
-		var parentNode = event.target.parentNode;
-		safari.self.tab.setContextMenuEventUserInfo(event, { "tag": parentNode.tagName, "url": parentNode.href });
-		return;
+	var node = event.target;
+	
+	if(node.tagName != 'A'){
+		node = findParentAnchorNode(node);
 	}
     
-	safari.self.tab.setContextMenuEventUserInfo(event, { "tag": event.target.tagName, "url": event.target.href });
+	safari.self.tab.setContextMenuEventUserInfo(event, { "tag": node.tagName, "url": node.href });
+}
+
+function findParentAnchorNode(node) {
+    var parent = node.parentNode;
+    while((parent) && (parent.tagName != 'A')) {  
+        parent = parent.parentNode;
+    }
+	return parent;
 }
