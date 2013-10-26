@@ -45,6 +45,8 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>https://github.com/Erikmitk/AddToInstapaper/raw/master/updatemanifest.plist</string>
 	<key>Website</key>
 	<string>http://kalaxy.net</string>
 </dict>
