@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<script>
+
+safari.application.addEventListener("contextmenu", handleContextMenu, false);
+safari.application.addEventListener("command", addToInstapaper, false);
+
+var request = new XMLHttpRequest();
+
+function handleContextMenu(event) {
+	if ((safari.extension.secureSettings.username.length != 0) && (event.userInfo.tag === "A")){
+		event.contextMenu.appendContextMenuItem("addToInstapaper", "Add to Instapaper");
+	}
+}
+
+function addToInstapaper(event) {
+	if (event.command === "addToInstapaper") {
+		request.open('POST', 'https://www.instapaper.com/api/add', true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		request.onreadystatechange = callback;
+		request.send('username=' + safari.extension.secureSettings.username + '&password=' + safari.extension.secureSettings.password + '&url=' + event.userInfo.url + '&redirect=close');
+	}
+}
+
+function callback() {
+	if (request.readyState == 4 && request.status == 403){
+		alert('User name or password are incorrect.\n\nPlease enter your credentials in the extension settings.');
+	}
+
+	if (request.readyState == 4 && request.status == 500){
+		alert('The Instapaper server is probably down.\n\nPlease try again later.');
+	}
+}
+</script>
