@@ -10,11 +10,11 @@
        <key>Developer Identifier</key>
        <string>F6A54C67LE</string>
        <key>CFBundleVersion</key>
-       <string>2</string>
+       <string>3</string>
        <key>CFBundleShortVersionString</key>
-       <string>1.0.1</string>
+       <string>1.0.2</string>
        <key>URL</key>
-       <string>https://github.com/Erikmitk/AddToInstapaper/releases/download/1.0.1/AddToInstapaper.safariextz</string>
+       <string>https://github.com/Erikmitk/AddToInstapaper/releases/download/1.0.2/AddToInstapaper.safariextz</string>
      </dict>
    </array>
 </dict>
