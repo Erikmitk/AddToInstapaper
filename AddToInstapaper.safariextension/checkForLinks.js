@@ -7,14 +7,14 @@ function handleContextMenu(event)
 	if(node.tagName != 'A'){
 		node = findParentAnchorNode(node);
 	}
-    
+
 	safari.self.tab.setContextMenuEventUserInfo(event, { "tag": node.tagName, "url": node.href });
 }
 
 function findParentAnchorNode(node) {
-    var parent = node.parentNode;
-    while((parent) && (parent.tagName != 'A')) {  
-        parent = parent.parentNode;
-    }
+	var parent = node.parentNode;
+	while((parent) && (parent.tagName != 'A')) {  
+		parent = parent.parentNode;
+	}
 	return parent;
 }
