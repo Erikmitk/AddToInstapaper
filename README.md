@@ -8,7 +8,7 @@ How to Install
 
 1. Download AddToInstapaper.safariextz
 
-	https://github.com/Erikmitk/AddToInstapaper/releases/download/1.0.2/AddToInstapaper.safariextz
+	https://github.com/Erikmitk/AddToInstapaper/releases/download/1.0.3/AddToInstapaper.safariextz
 
 2. Double click the .safariextz file to install in Safari
 
