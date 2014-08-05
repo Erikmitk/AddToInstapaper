@@ -4,8 +4,12 @@ function handleContextMenu(event)
 {
 	var node = event.target;
 	
-	if(node.tagName != 'A'){
+	if(node.tagName != 'A') {
 		node = findParentAnchorNode(node);
+	}
+	
+	if (node == null) {
+		return;
 	}
 
 	safari.self.tab.setContextMenuEventUserInfo(event, { "tag": node.tagName, "url": node.href });
