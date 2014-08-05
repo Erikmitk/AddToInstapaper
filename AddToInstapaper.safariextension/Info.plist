@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Erikmitk</string>
 	<key>Builder Version</key>
-	<string>9537.71</string>
+	<string>10600.1.3.41</string>
 	<key>CFBundleDisplayName</key>
 	<string>Add to Instapaper</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>CFBundleVersion</key>
 	<string>3</string>
 	<key>Chrome</key>
@@ -33,6 +33,8 @@
 	</dict>
 	<key>Description</key>
 	<string>Adds a contextual menu to add links directly to Instapaper.</string>
+	<key>DeveloperIdentifier</key>
+	<string>F6A54C67LE</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
